@@ -190,19 +190,10 @@ function App() {
           <div className="w-full h-auto flex flex-col items-start justify-start gap-8 divide-y divide-slate-200 mt-5">
             <div className="w-full h-auto flex flex-col items-start justify-start gap-4 pb-8">
               <figure>
-                <img src="https://placehold.co/1200x600" alt="" />
+                <img src="/projects/penina.png" alt="" />
               </figure>
               <div className="flex flex-col items-start justify-start gap-2 text-slate-600">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas necessitatibus quae accusamus harum alias placeat ab impedit tempora, dolor exercitationem, mollitia unde. Et repudiandae officiis laboriosam mollitia ullam alias possimus.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, debitis molestiae cumque quas iste odit. Totam similique, dicta eaque nam quod eum assumenda cupiditate ipsa voluptatibus, ea blanditiis reiciendis, distinctio nihil libero repellendus recusandae iusto qui consequuntur voluptas?</p>
-              </div>
-            </div>
-            <div className="w-full h-auto flex flex-col items-start justify-start gap-4">
-              <figure>
-                <img src="https://placehold.co/1200x600" alt="" />
-              </figure>
-              <div className="flex flex-col items-start justify-start gap-2 text-slate-600">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas necessitatibus quae accusamus harum alias placeat ab impedit tempora, dolor exercitationem, mollitia unde. Et repudiandae officiis laboriosam mollitia ullam alias possimus.</p>
+                <p>Desenvolvimento visual e estratégico do feed para a Penina, criando uma identidade moderna, consistente e alinhada ao posicionamento da marca. O projeto foi pensado para fortalecer a presença digital da empresa através de peças criativas, comunicação visual atrativa e conteúdos voltados para engajamento e reconhecimento da marca nas redes sociais. <a href="https://www.instagram.com/peninabrasil/" target="_blank" className="text-indigo-500 hover:underline">Confira aqui</a>.</p>
               </div>
             </div>
           </div>
