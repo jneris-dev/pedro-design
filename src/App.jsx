@@ -1,27 +1,29 @@
 function App() {
   return (
-    <main className="App w-full h-screen">
-      <header className="w-full h-16 bg-white border-b border-slate-100">
+    <main className="w-full h-auto relative">
+      <header className="w-full h-16 bg-white/50 border-b border-slate-100 sticky top-0 z-50 backdrop-blur-md">
         <nav className="w-full h-full flex items-center justify-between px-4 mx-auto max-w-7xl">
           <div className="flex items-center justify-between w-full">
             <a href="/" className="text-indigo-800 text-xl font-bold">Pedro Design</a>
             <div className="hidden md:block">
               <ul className="flex space-x-10 font-light divide-x-2 divide-slate-200">
-                <li><a href="/" className="text-slate-800 hover:text-indigo-500 pe-10">Home</a></li>
-                <li><a href="/" className="text-slate-800 hover:text-indigo-500 pe-10">About</a></li>
-                <li><a href="/" className="text-slate-800 hover:text-indigo-500">Contact</a></li>
+                <li><a href="/" className="hover:text-indigo-500 pe-10">Inicio</a></li>
+                <li><a href="/" className="hover:text-indigo-500 pe-10">Sobre</a></li>
+                <li><a href="/" className="hover:text-indigo-500 pe-10">Projetos</a></li>
+                <li><a href="/" className="hover:text-indigo-500">Contato</a></li>
               </ul>
             </div>
           </div>
         </nav>
       </header>
 
-      <section className="w-full h-auto flex items-center justify-center py-24">
+      <section className="w-full h-auto flex flex-col items-center justify-center pt-24 pb-10 gap-20">
         <div className="w-full h-auto px-4 mx-auto max-w-5xl flex flex-col items-center justify-center gap-8">
           <h2 className="text-5xl">Sobre</h2>
           <div className="w-full h-auto flex flex-col items-start justify-start gap-4 text-slate-600 text-justify">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim suscipit deserunt temporibus harum aliquam animi libero? Inventore doloremque labore non. Quidem magnam, quibusdam eius corporis dignissimos iste incidunt? Officia modi pariatur optio quaerat laborum magni nostrum amet cupiditate? Quis odit magnam rerum expedita nulla odio vero fugit officiis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae a, esse iusto dignissimos culpa quaerat ipsa obcaecati tempora nihil unde, cupiditate aut. Ducimus, voluptatem consequatur veniam repellat, asperiores sed, doloribus placeat voluptatibus corrupti pariatur fuga sapiente. Ducimus delectus deleniti voluptatibus!</p>
+            <p>Sou designer e programador. Especializado em branding, design e comunicação digital. Sempre buscando ideias criativas e inovadoras, que gerem resultados tangíveis.</p>
+            <p>Com uma trajetória de 7 anos no mercado, atuando como designer e programador para grandes marcas como LG, Unimed, Cummins, Doremus entre outras onde pude ampliar meu conhecimento e criatividade garantindo a qualidade na entrega e satisfação do cliente.</p>
+            <p>Me aperfeiçoei em Criação de Site, Lojas Virtual (E-commerce), Identidade Visual, Design Gráfico e Comunicação Visual. Minhas criações seguem sólidos conceitos do design, gestalt e teoria da cor sempre levando em consideração o tipo de negócio, concorrentes e melhor forma de impacto para disseminação da marca. Desenvolvo sites modernos, de fácil navegação e facilmente atualizáveis, com excelente visibilidade junto aos buscadores.</p>
           </div>
           <div className="w-full h-auto flex items-center justify-center gap-4">
             <div className="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center">
@@ -29,6 +31,66 @@ function App() {
             </div>
             <div className="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" className="fill-indigo-500"><path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"/></svg>
+            </div>
+          </div>
+        </div>        
+        <div className="w-full max-w-7xl flex overflow-hidden mx-auto">
+          <div className="group flex gap-8 flex-[0_0_100%] will-change-transform px-4 animate-marquee">
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/figma.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/photoshop.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/illustrator.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/indesign.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/notion.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/openai.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/protopie.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/capcut.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/canva.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+          </div>
+          <div className="group flex gap-8 flex-[0_0_100%] will-change-transform px-4 animate-marquee" aria-hidden="true">
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/figma.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/photoshop.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/illustrator.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/indesign.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/notion.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/openai.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/protopie.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/capcut.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+            </div>
+            <div className="flex w-auto h-auto flex-1">
+              <img src="/tools/canva.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
           </div>
         </div>
@@ -41,8 +103,8 @@ function App() {
             <div className="md:w-1/2 w-full px-8">
               <div className="flex flex-col items-center justify-center text-center gap-4">
                 <div>
-                  <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                    width="52" height="52" viewBox="0 0 32 32" xml:space="preserve">
+                  <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
+                    width="52" height="52" viewBox="0 0 32 32" xmlSpace="preserve">
                   <path d="M29,4H3C1.343,4,0,5.343,0,7v16c0,1.657,1.343,3,3,3h9v3h-1.5c-0.276,0-0.5,0.224-0.5,0.5l0,0
                     c0,0.276,0.224,0.5,0.5,0.5h11c0.276,0,0.5-0.224,0.5-0.5l0,0c0-0.276-0.224-0.5-0.5-0.5H20v-3h9c1.657,0,3-1.343,3-3V7
                     C32,5.343,30.657,4,29,4z M19,29h-6v-3h6V29z M31,23c0,1.105-0.895,2-2,2H3c-1.105,0-2-0.895-2-2V7c0-1.105,0.895-2,2-2h26
@@ -57,13 +119,13 @@ function App() {
                   </svg>
                 </div>
                 <strong className="text-lg">Design Digital</strong>
-                <p className="text-sm text-slate-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo reiciendis nesciunt excepturi quis eum fugit praesentium ipsa delectus assumenda!</p>
+                <p className="text-sm text-slate-600">Criação e produção de layouts usuais e acessíveis, acompanhando as tecnologias e tendências do mercado. Site Institucional, Loja Virtual (E-commerce), Portais, Landing page, E-mail Marketing e todos materiais digitais.</p>
               </div>
             </div>
             <div className="md:w-1/2 w-full px-8">
               <div className="flex flex-col items-center justify-center text-center gap-4">
                 <div>
-                  <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 32 32" xml:space="preserve">
+                  <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 32 32" xmlSpace="preserve">
                     <path d="M19,0h-6c-1.657,0-3,1.343-3,3v22c0,0.552,0.448,1,1,1l4,4v0.957c0,0.522,0.382,0.989,0.902,1.038
                     C16.498,32.052,17,31.585,17,31v-1l4-4c0.552,0,1-0.448,1-1V3C22,1.343,20.657,0,19,0z M16.586,29h-1.171l-3-3h7.172L16.586,29z
                     M21,25H11V11h1v4c0,1.105,0.895,2,2,2s2-0.895,2-2v-4h5V25z M21,10h-6v5c0,0.551-0.449,1-1,1s-1-0.449-1-1v-5h-2V3
@@ -71,7 +133,7 @@ function App() {
                   </svg>
                 </div>
                 <strong className="text-lg">Identidade Visual</strong>
-                <p className="text-sm text-slate-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo reiciendis nesciunt excepturi quis eum fugit praesentium ipsa delectus assumenda!</p>
+                <p className="text-sm text-slate-600">Criação de identidade visual, incluindo manual de aplicação personalizado da marca, em diversos formatos, tipos e estilos para publicações e orientações, juntamente com a criação do material de papelaria.</p>
               </div>
             </div>
           </div>
@@ -79,8 +141,8 @@ function App() {
             <div className="md:w-1/2 w-full px-8">
               <div className="flex flex-col items-center justify-center text-center gap-4">
                 <div>
-                  <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                    width="52" height="52" viewBox="0 0 32 32" xml:space="preserve">
+                  <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
+                    width="52" height="52" viewBox="0 0 32 32" xmlSpace="preserve">
                   <path d="M19.5,12.5c0,0.276-0.224,0.5-0.5,0.5h-6c-0.276,0-0.5-0.224-0.5-0.5S12.724,12,13,12h6
                     C19.276,12,19.5,12.224,19.5,12.5z M19.5,14.5c0,0.276-0.224,0.5-0.5,0.5h-6c-0.276,0-0.5-0.224-0.5-0.5S12.724,14,13,14h6
                     C19.276,14,19.5,14.224,19.5,14.5z M19.5,16.5c0,0.276-0.224,0.5-0.5,0.5h-6c-0.276,0-0.5-0.224-0.5-0.5S12.724,16,13,16h6
@@ -94,13 +156,13 @@ function App() {
                   </svg>
                 </div>
                 <strong className="text-lg">Apresentações</strong>
-                <p className="text-sm text-slate-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo reiciendis nesciunt excepturi quis eum fugit praesentium ipsa delectus assumenda!</p>
+                <p className="text-sm text-slate-600">Criação de identidades visuais para apresentações para empresas. Apresentações simples de entender, objetivas, visualmente impactantes e que prendem a atenção da audiência.</p>
               </div>
             </div>
             <div className="md:w-1/2 w-full px-8">
               <div className="flex flex-col items-center justify-center text-center gap-4">
                 <div>
-                  <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 32 32" xml:space="preserve">
+                  <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 32 32" xmlSpace="preserve">
                     <path d="M16,1C9.373,1,5,6.373,5,13c0,5.773,4.761,10.185,6.43,11.555c0.213,0.175,0.461,0.294,0.723,0.366
                       l0.568,3.408C12.882,29.293,13.717,30,14.694,30L15,30c0,0.552,0.448,1,1,1h0c0.552,0,1-0.448,1-1l0.306,0
                       c0.978,0,1.812-0.707,1.973-1.671l0.568-3.408c0.262-0.072,0.51-0.191,0.723-0.366C22.239,23.185,27,18.773,27,13
@@ -115,7 +177,7 @@ function App() {
                   </svg>
                 </div>
                 <strong className="text-lg">Design Gráfico</strong>
-                <p className="text-sm text-slate-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe illo reiciendis nesciunt excepturi quis eum fugit praesentium ipsa delectus assumenda!</p>
+                <p className="text-sm text-slate-600">Criação de projetos gráficos, trabalhos exclusivos para o público determinado. Folders, cartão de visita, pastas, folhetos, flyers, catálogos, informativos, anúncios para jornal entre outros tipos de materiais gráficos.</p>
               </div>
             </div>
           </div>
@@ -152,13 +214,13 @@ function App() {
           <img src="/illustration.gif" className="max-w-full h-auto w-40" alt="" />
           <h3 className="text-3xl font-light">Vamos trabalhar juntos?</h3>
           <div className="w-full h-auto flex items-center justify-center gap-4">
-              <a href="mailto:" className="text-slate-600 hover:text-indigo-500 hover:underline underline-offset-2 flex items-center justify-center gap-2">
+              <a href="mailto:jneris.wd@gmail.com" className="text-slate-600 hover:text-indigo-500 hover:underline underline-offset-2 flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" className="fill-indigo-500"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
-                @gmail.com
+                jneris.wd@gmail.com
               </a>
-              <a href="tel:+" className="text-slate-600 hover:text-indigo-500 hover:underline underline-offset-2 flex items-center justify-center gap-2">
+              <a href="https://wa.me/5511981542925?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento" className="text-slate-600 hover:text-indigo-500 hover:underline underline-offset-2 flex items-center justify-center gap-2" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" className="fill-indigo-500"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                +55 (11) 99999-9999
+                +55 (11) 98154-2925
               </a>
           </div>
           <hr className="w-full border-slate-200 my-0" />
