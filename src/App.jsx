@@ -20,7 +20,7 @@ function App() {
       <section className="w-full h-auto flex flex-col items-center justify-center pt-24 pb-10 gap-20">
         <div className="w-full h-auto px-4 mx-auto max-w-5xl flex flex-col items-center justify-center gap-8">
           <h2 className="text-5xl">Sobre</h2>
-          <div className="w-full h-auto flex flex-col items-start justify-start gap-4 text-slate-600 text-justify">
+          <div className="w-full h-auto flex flex-col items-start justify-start gap-4 text-slate-600 text-start">
             <p>Sou designer e programador. Especializado em branding, design e comunicação digital. Sempre buscando ideias criativas e inovadoras, que gerem resultados tangíveis.</p>
             <p>Com uma trajetória de 7 anos no mercado, atuando como designer e programador para grandes marcas como LG, Unimed, Cummins, Doremus entre outras onde pude ampliar meu conhecimento e criatividade garantindo a qualidade na entrega e satisfação do cliente.</p>
             <p>Me aperfeiçoei em Criação de Site, Lojas Virtual (E-commerce), Identidade Visual, Design Gráfico e Comunicação Visual. Minhas criações seguem sólidos conceitos do design, gestalt e teoria da cor sempre levando em consideração o tipo de negócio, concorrentes e melhor forma de impacto para disseminação da marca. Desenvolvo sites modernos, de fácil navegação e facilmente atualizáveis, com excelente visibilidade junto aos buscadores.</p>
@@ -37,60 +37,60 @@ function App() {
         <div className="w-full max-w-7xl flex overflow-hidden mx-auto">
           <div className="group flex gap-8 flex-[0_0_100%] will-change-transform px-4 animate-marquee">
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/figma.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/figma.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/photoshop.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/photoshop.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/illustrator.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/illustrator.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/indesign.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/indesign.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/notion.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/notion.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/openai.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/openai.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/protopie.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/protopie.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/capcut.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/capcut.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/canva.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/canva.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
           </div>
           <div className="group flex gap-8 flex-[0_0_100%] will-change-transform px-4 animate-marquee" aria-hidden="true">
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/figma.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/figma.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/photoshop.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/photoshop.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/illustrator.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/illustrator.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/indesign.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/indesign.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/notion.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/notion.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/openai.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/openai.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/protopie.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/protopie.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/capcut.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/capcut.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/canva.svg" className="h-7 w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/canva.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ function App() {
         <div className="w-full h-auto mx-auto md:px-12 px-4 flex flex-col items-center justify-center gap-8">
           <h2 className="text-5xl font-light">Atuação</h2>
           <div className="flex flex-row flex-wrap pt-5 gap-y-12 md:divide-x divide-slate-200">
-            <div className="md:w-1/2 w-full px-8">
+            <div className="md:w-1/2 w-full md:px-8">
               <div className="flex flex-col items-center justify-center text-center gap-4">
                 <div>
                   <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
@@ -122,7 +122,7 @@ function App() {
                 <p className="text-sm text-slate-600">Criação e produção de layouts usuais e acessíveis, acompanhando as tecnologias e tendências do mercado. Site Institucional, Loja Virtual (E-commerce), Portais, Landing page, E-mail Marketing e todos materiais digitais.</p>
               </div>
             </div>
-            <div className="md:w-1/2 w-full px-8">
+            <div className="md:w-1/2 w-full md:px-8">
               <div className="flex flex-col items-center justify-center text-center gap-4">
                 <div>
                   <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 32 32" xmlSpace="preserve">
@@ -138,7 +138,7 @@ function App() {
             </div>
           </div>
           <div className="flex flex-row flex-wrap pt-5 gap-y-12 md:divide-x divide-slate-200">
-            <div className="md:w-1/2 w-full px-8">
+            <div className="md:w-1/2 w-full md:px-8">
               <div className="flex flex-col items-center justify-center text-center gap-4">
                 <div>
                   <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
@@ -159,7 +159,7 @@ function App() {
                 <p className="text-sm text-slate-600">Criação de identidades visuais para apresentações para empresas. Apresentações simples de entender, objetivas, visualmente impactantes e que prendem a atenção da audiência.</p>
               </div>
             </div>
-            <div className="md:w-1/2 w-full px-8">
+            <div className="md:w-1/2 w-full md:px-8">
               <div className="flex flex-col items-center justify-center text-center gap-4">
                 <div>
                   <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 32 32" xmlSpace="preserve">
@@ -203,8 +203,8 @@ function App() {
       <footer className="w-full h-auto flex items-center justify-center pt-12 pb-8 bg-white">
         <div className="w-full h-auto px-4 mx-auto max-w-5xl flex flex-col items-center justify-center gap-8">
           <img src="/illustration.gif" className="max-w-full h-auto w-40" alt="" />
-          <h3 className="text-3xl font-light">Vamos trabalhar juntos?</h3>
-          <div className="w-full h-auto flex items-center justify-center gap-4">
+          <h3 className="text-3xl font-light text-center">Vamos trabalhar juntos?</h3>
+          <div className="w-full h-auto flex sm:flex-row flex-col items-center justify-center gap-4">
               <a href="mailto:jneris.wd@gmail.com" className="text-slate-600 hover:text-indigo-500 hover:underline underline-offset-2 flex items-center justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" className="fill-indigo-500"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
                 jneris.wd@gmail.com
@@ -215,7 +215,7 @@ function App() {
               </a>
           </div>
           <hr className="w-full border-slate-200 my-0" />
-          <p className="text-sm text-slate-600">&copy; 2026 <b className="text-indigo-500">Pedro Design</b>. Todos os direitos reservados.</p>
+          <p className="text-sm text-slate-600 text-center">&copy; 2026 <b className="text-indigo-500">Pedro Design</b>. Todos os direitos reservados.</p>
         </div>
       </footer>
     </main>
