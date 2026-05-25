@@ -1,23 +1,65 @@
+import { useState } from 'react'
+
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const links = [
+    { name: 'Inicio', href: '/' },
+    { name: 'Sobre', href: '/#about' },
+    { name: 'Projetos', href: '/#projects' },
+    { name: 'Contato', href: '/#contact' },
+  ]
+
   return (
     <main className="w-full h-auto relative">
       <header className="w-full h-16 bg-white/50 border-b border-slate-100 sticky top-0 z-50 backdrop-blur-md">
         <nav className="w-full h-full flex items-center justify-between px-4 mx-auto max-w-7xl">
           <div className="flex items-center justify-between w-full">
-            <a href="/" className="text-indigo-800 text-xl font-bold">Pedro Design</a>
-            <div className="hidden md:block">
-              <ul className="flex space-x-10 font-light divide-x-2 divide-slate-200">
-                <li><a href="/" className="hover:text-indigo-500 pe-10">Inicio</a></li>
-                <li><a href="/" className="hover:text-indigo-500 pe-10">Sobre</a></li>
-                <li><a href="/" className="hover:text-indigo-500 pe-10">Projetos</a></li>
-                <li><a href="/" className="hover:text-indigo-500">Contato</a></li>
+            <a href="/" className="text-indigo-600 text-xl font-bold">Pedro Design</a>
+            <div className={`
+              absolute left-0 top-16 w-full overflow-hidden
+              border-b border-slate-100 bg-white/95 backdrop-blur-md
+              transition-all duration-300 md:static md:w-auto
+              md:border-0 md:bg-transparent md:backdrop-blur-none
+              ${
+                menuOpen
+                  ? 'max-h-96 opacity-100'
+                  : 'max-h-0 opacity-0 md:max-h-none md:opacity-100'
+              }
+            `}>
+              <ul className="flex flex-col py-4 md:flex-row md:items-center md:gap-10 md:py-0">
+                {links.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className="block px-4 py-3 font-light transition hover:bg-slate-50 hover:text-indigo-500 md:p-0 md:hover:bg-transparent"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="rounded p-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 md:hidden"
+            >
+              <svg
+                viewBox="0 0 24 18"
+                width={24}
+                height={18}
+                className="fill-none stroke-indigo-500 stroke-2"
+              >
+                <path d="M3 6H21" strokeLinecap="round"/>
+                <path d="M3 12H21" strokeLinecap="round"/>
+              </svg>
+            </button>
           </div>
         </nav>
       </header>
 
-      <section className="w-full h-auto flex flex-col items-center justify-center pt-24 pb-10 gap-20">
+      <section className="w-full h-auto flex flex-col items-center justify-center pt-24 pb-10 gap-20" id="about">
         <div className="w-full h-auto px-4 mx-auto max-w-5xl flex flex-col items-center justify-center gap-8">
           <h2 className="text-5xl">Sobre</h2>
           <div className="w-full h-auto flex flex-col items-start justify-start gap-4 text-slate-600 text-start">
@@ -26,71 +68,71 @@ function App() {
             <p>Me aperfeiçoei em Criação de Site, Lojas Virtual (E-commerce), Identidade Visual, Design Gráfico e Comunicação Visual. Minhas criações seguem sólidos conceitos do design, gestalt e teoria da cor sempre levando em consideração o tipo de negócio, concorrentes e melhor forma de impacto para disseminação da marca. Desenvolvo sites modernos, de fácil navegação e facilmente atualizáveis, com excelente visibilidade junto aos buscadores.</p>
           </div>
           <div className="w-full h-auto flex items-center justify-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" className="fill-indigo-500"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
+            <div className="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center group hover:bg-indigo-500 transition cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" className="fill-indigo-500 group-hover:fill-white"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
             </div>
-            <div className="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" className="fill-indigo-500"><path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"/></svg>
+            <div className="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center group hover:bg-indigo-500 transition cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" className="fill-indigo-500 group-hover:fill-white"><path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z"/></svg>
             </div>
           </div>
         </div>        
         <div className="w-full max-w-7xl flex overflow-hidden mx-auto">
           <div className="group flex gap-8 flex-[0_0_100%] will-change-transform px-4 animate-marquee">
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/figma.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/figma.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="figma" title="figma" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/photoshop.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/photoshop.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="photoshop" title="photoshop" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/illustrator.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/illustrator.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="illustrator" title="illustrator" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/indesign.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/indesign.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="indesign" title="indesign" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/notion.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/notion.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="notion" title="notion" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/openai.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/openai.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="openai" title="openai" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/protopie.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/protopie.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="protopie" title="protopie" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/capcut.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/capcut.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="capcut" title="capcut" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/canva.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/canva.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="canva" title="canva" />
             </div>
           </div>
           <div className="group flex gap-8 flex-[0_0_100%] will-change-transform px-4 animate-marquee" aria-hidden="true">
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/figma.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/figma.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="figma" title="figma" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/photoshop.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/photoshop.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="photoshop" title="photoshop" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/illustrator.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/illustrator.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="illustrator" title="illustrator" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/indesign.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/indesign.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="indesign" title="indesign" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/notion.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/notion.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="notion" title="notion" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/openai.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/openai.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="openai" title="openai" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/protopie.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/protopie.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="protopie" title="protopie" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/capcut.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/capcut.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="capcut" title="capcut" />
             </div>
             <div className="flex w-auto h-auto flex-1">
-              <img src="/tools/canva.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" />
+              <img src="/tools/canva.svg" className="md:h-7 h-10 max-w-fit w-auto opacity-25 grayscale transition hover:opacity-100 hover:grayscale-0" alt="canva" title="canva" />
             </div>
           </div>
         </div>
@@ -184,7 +226,7 @@ function App() {
         </div>
       </section>
 
-      <section className="w-full h-auto flex items-center justify-center py-24">
+      <section className="w-full h-auto flex items-center justify-center py-24" id="projects">
         <div className="w-full h-auto px-4 mx-auto max-w-5xl flex flex-col items-center justify-center gap-8">
           <h2 className="text-5xl">Projetos</h2>
           <div className="w-full h-auto flex flex-col items-start justify-start gap-8 divide-y divide-slate-200 mt-5">
@@ -192,15 +234,33 @@ function App() {
               <figure>
                 <img src="/projects/penina.png" alt="" />
               </figure>
-              <div className="flex flex-col items-start justify-start gap-2 text-slate-600">
-                <p>Desenvolvimento visual e estratégico do feed para a Penina, criando uma identidade moderna, consistente e alinhada ao posicionamento da marca. O projeto foi pensado para fortalecer a presença digital da empresa através de peças criativas, comunicação visual atrativa e conteúdos voltados para engajamento e reconhecimento da marca nas redes sociais. <a href="https://www.instagram.com/peninabrasil/" target="_blank" className="text-indigo-500 hover:underline">Confira aqui</a>.</p>
+              <div className="flex flex-col items-start justify-start gap-2 text-slate-700 leading-relaxed">
+                <p>Desenvolvimento visual e estratégico do feed para a Penina, criando uma identidade moderna, consistente e alinhada ao posicionamento da marca. O projeto foi pensado para fortalecer a presença digital da empresa através de peças criativas, comunicação visual atrativa e conteúdos voltados para engajamento e reconhecimento da marca nas redes sociais.&nbsp;<a href="https://www.instagram.com/peninabrasil/" target="_blank" rel="noreferrer noopener" className="text-indigo-700 hover:underline font-medium transition">Confira aqui</a>.</p>
+              </div>
+            </div>
+            <div className="w-full h-auto flex flex-col items-start justify-start gap-4 pb-8">
+              <figure>
+                <img src="/projects/dm-vet.png" alt="" />
+              </figure>
+              <div className="flex flex-col items-start justify-start gap-2 text-slate-700 leading-relaxed">
+                <p>Projeto desenvolvido para a clínica veterinária DMVet, envolvendo todo o processo criativo e técnico — desde a criação do layout até o desenvolvimento completo do site. O objetivo foi construir uma presença digital moderna, profissional e acolhedora, transmitindo confiança e credibilidade para os clientes da clínica.</p>
+                <p>O site foi planejado com foco em experiência do usuário, responsividade e fácil navegação, valorizando os serviços, a identidade visual da marca e facilitando o contato com a clínica em diferentes dispositivos.&nbsp;<a href="https://www.dmvet.com.br/" target="_blank" rel="noreferrer noopener" className="text-indigo-700 hover:underline font-medium transition">Confira aqui</a>.</p>
+              </div>
+            </div>
+            <div className="w-full h-auto flex flex-col items-start justify-start gap-4 pb-8">
+              <figure>
+                <img src="/projects/dubai-cafe.png" alt="" />
+              </figure>
+              <div className="flex flex-col items-start justify-start gap-2 text-slate-700">
+                <p>Projeto de rebranding desenvolvido para a Dubai Café & Bistrô, com foco na modernização da identidade visual da marca e no fortalecimento da sua presença digital. O trabalho buscou transmitir uma estética mais sofisticada, aconchegante e alinhada à proposta da cafeteria, valorizando sua personalidade e experiência oferecida aos clientes.</p>
+                <p>O processo envolveu a reconstrução visual da marca, definição de elementos gráficos, tipografia, paleta de cores e aplicações visuais, criando uma identidade mais consistente, memorável e preparada para diferentes pontos de contato, tanto no ambiente físico quanto no digital.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <footer className="w-full h-auto flex items-center justify-center pt-12 pb-8 bg-white">
+      <footer className="w-full h-auto flex items-center justify-center pt-12 pb-8 bg-white" id="contact">
         <div className="w-full h-auto px-4 mx-auto max-w-5xl flex flex-col items-center justify-center gap-8">
           <img src="/illustration.gif" className="max-w-full h-auto w-40" alt="" />
           <h3 className="text-3xl font-light text-center">Vamos trabalhar juntos?</h3>
