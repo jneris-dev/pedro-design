@@ -42,8 +42,10 @@ function App() {
               </ul>
             </div>
             <button
+              type="button"
               onClick={() => setMenuOpen(!menuOpen)}
               className="rounded p-2 focus:outline-none focus:ring-1 focus:ring-indigo-500 md:hidden"
+              aria-label="Toggle menu"
             >
               <svg
                 viewBox="0 0 24 18"
