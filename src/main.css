@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Comfortaa', sans-serif;
+  }
+}
+
+body {
+  @apply bg-slate-50 text-slate-800 font-normal;
+}
