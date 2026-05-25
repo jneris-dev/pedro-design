@@ -149,6 +149,7 @@ function App() {
 
       <footer className="w-full h-auto flex items-center justify-center pt-12 pb-8 bg-white">
         <div className="w-full h-auto px-4 mx-auto max-w-5xl flex flex-col items-center justify-center gap-8">
+          <img src="/illustration.gif" className="max-w-full h-auto w-40" alt="" />
           <h3 className="text-3xl font-light">Vamos trabalhar juntos?</h3>
           <div className="w-full h-auto flex items-center justify-center gap-4">
               <a href="mailto:" className="text-slate-600 hover:text-indigo-500 hover:underline underline-offset-2 flex items-center justify-center gap-2">
