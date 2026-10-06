@@ -258,6 +258,14 @@ function App() {
                 <p>O processo envolveu a reconstrução visual da marca, definição de elementos gráficos, tipografia, paleta de cores e aplicações visuais, criando uma identidade mais consistente, memorável e preparada para diferentes pontos de contato, tanto no ambiente físico quanto no digital.</p>
               </div>
             </div>
+            <div className="w-full h-auto flex flex-col items-start justify-start gap-4 pb-8">
+              <figure>
+                <img src="/projects/chaves-auerbach.png" alt="" />
+              </figure>
+              <div className="flex flex-col items-start justify-start gap-2 text-slate-700">
+                <p>Desenvolvimento da identidade visual do Chaves Auerbach, escritório de advocacia, com o objetivo de construir uma presença sólida, sofisticada e contemporânea. O projeto explorou uma linguagem visual minimalista, equilibrando tradição e modernidade para transmitir confiança, autoridade e profissionalismo. A identidade foi pensada para proporcionar consistência à marca em diferentes aplicações e pontos de contato.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
